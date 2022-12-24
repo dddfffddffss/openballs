@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-import bin.*;
+import src.*;
 
 class play
 {

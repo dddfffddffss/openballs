@@ -1,7 +1,4 @@
-package bin;
-
-import java.util.*;
-import java.io.*;
+package src;
 
 public class gravityfield
 {
