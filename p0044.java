@@ -11,14 +11,14 @@ class p0044
 		double gc = 0.1;
 		double scale = 7  , gap = 0.1 ;
 		double mx = windowx*mag/2 , my = windowy*mag/2 , m = 2 ;
-		double dpx=0,dpy=0,d=1,v=40;
+		double d=1;
 		int ballsize = 7;
 
 		ArrayList<object> ao = new ArrayList<object>();
 		for(double i=-scale/2;i<+scale/2 ;i+=gap ){
 			for(double j=-scale/2;j<+scale/2 ;j+=gap ){
 				if( i*i + j*j < scale*scale/4 ){
-					ao.add(new object( i+mx , j+my , v*j , v*-i , m*d , ballsize));
+					ao.add(new object( i+mx , j+my , 0 , 0 , m*d , ballsize));
 				}
 			}
 		}
