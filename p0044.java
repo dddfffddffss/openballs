@@ -5,13 +5,13 @@ class p0044
 {
 	public static void main(String[] args) 
 	{
-		double mag = 100;
+		double mag = 10;
 
 		int windowx = 1900 , windowy = 950 , t = 10;
 		double gc = 0.1;
 		double scale = 7  , gap = 0.1 ;
-		double mx = windowx*mag/2 , my = windowy*mag/2 , m = 2 ;
-		double dpx=0,dpy=0,d=1,v=40;
+		double mx = windowx*mag/2 , my = windowy*mag/2 , m = 1 ;
+		double d=1,v=20;
 		int ballsize = 7;
 
 		ArrayList<object> ao = new ArrayList<object>();

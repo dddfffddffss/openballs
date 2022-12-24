@@ -49,17 +49,5 @@ public class object
 		vy+=ay/m;
 		x+=vx;
 		y+=vy;
-
-		if(x<0 && vx<0){
-			vx=-vx;
-		}else if(x>1875*mag && vx>0){
-			vx=-vx;
-		}
-
-		if(y<0 && vy<0){
-			vy=-(vy);
-		}else if(y>950*mag && vy>0){
-			vy=-(vy);
-		}
 	}
 }
