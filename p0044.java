@@ -1,7 +1,5 @@
 import java.util.*;
-import java.awt.*;
-import javax.swing.*;
-import bin.*;
+import src.*;
 
 class p0044
 {

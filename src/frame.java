@@ -1,6 +1,5 @@
-package bin;
+package src;
 
-import java.util.*;
 import java.awt.*;
 import javax.swing.*;
 
