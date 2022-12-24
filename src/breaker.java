@@ -7,10 +7,10 @@ public class breaker extends Thread{
 	public void run(){
 		for(;;){
 			try{
-				InputStreamReader re = new InputStreamReader(System.in); //Å°º¸µåÀÔ·Â ½ºÆ®¸² »ı¼º
-				int c = re.read(); //Å°º¸µå·ÎºÎÅÍ ¹®ÀÚ ÇÏ³ª ÀĞ±â. ÀĞÀº ¹®ÀÚ °ªÀº C¿¡ ÀúÀå
+				InputStreamReader re = new InputStreamReader(System.in); //í‚¤ë³´ë“œì…ë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
+				int c = re.read(); //í‚¤ë³´ë“œë¡œë¶€í„° ë¬¸ì í•˜ë‚˜ ì½ê¸°. ì½ì€ ë¬¸ì ê°’ì€ Cì— ì €ì¥
 				if(c==109){
-					System.out.println("Á¾·áÇÏ´Â Áß...");
+					System.out.println("ì¢…ë£Œí•˜ëŠ” ì¤‘...");
 					b=true;
 					break;
 				}	

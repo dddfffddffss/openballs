@@ -7,34 +7,34 @@ class play
 	public static void main(String[] args) 
 	{
 		/*
-		 - mainpicdir »çÁø ÀúÀåµÇ´Â Æú´õ ¸í
-		   - ¹öÀü X,ÇÁ·Î±×·¥¸¶´Ù ´Ù¸£°í ½ÇÇà ÇÒ ¶§¸¶´Ù »õ·Î¿î ÇÏÀ§ Æú´õ¸¦ ¸¸µé¾î ÀúÀåµÊ
-		 - backup ¹é¾÷ÆÄÀÏÀ» ÀúÀåÇÒ Æú´õ ¸í
-		   - [backup]Æú´õ¿¡ [id(subdir)]ÆÄÀÏÀÌ ÀÚµ¿À¸·Î ÁöÁ¤µÇ¾î ÀúÀåµÊ
+		 - mainpicdir ì‚¬ì§„ ì €ì¥ë˜ëŠ” í´ë” ëª…
+		   - ë²„ì „ X,í”„ë¡œê·¸ë¨ë§ˆë‹¤ ë‹¤ë¥´ê³  ì‹¤í–‰ í•  ë•Œë§ˆë‹¤ ìƒˆë¡œìš´ í•˜ìœ„ í´ë”ë¥¼ ë§Œë“¤ì–´ ì €ì¥ë¨
+		 - backup ë°±ì—…íŒŒì¼ì„ ì €ì¥í•  í´ë” ëª…
+		   - [backup]í´ë”ì— [id(subdir)]íŒŒì¼ì´ ìë™ìœ¼ë¡œ ì§€ì •ë˜ì–´ ì €ì¥ë¨
 
-		  ¤¡. ¹é¾÷ ÇÏ´Â ¹ı
-		    1.[backupdir]Æú´õ ³»¿¡ ÇöÀç ½Ã°¢À» ±âÁØÀ¸·Î ÇÑ ¹é¾÷ÆÄÀÏÀÌ ÀÚµ¿À¸·Î ¸¸µé¾îÁø´Ù.
-			  - [id(¹é¾÷ÆÄÀÏÀÇ ÀÌ¸§)] ¿Í [subdir([mainpicdir]¿¡¼­ »çÁøÀ» ÀúÀåÇÑ Æú´õ)] Àº °°´Ù.
+		  ã„±. ë°±ì—… í•˜ëŠ” ë²•
+		    1.[backupdir]í´ë” ë‚´ì— í˜„ì¬ ì‹œê°ì„ ê¸°ì¤€ìœ¼ë¡œ í•œ ë°±ì—…íŒŒì¼ì´ ìë™ìœ¼ë¡œ ë§Œë“¤ì–´ì§„ë‹¤.
+			  - [id(ë°±ì—…íŒŒì¼ì˜ ì´ë¦„)] ì™€ [subdir([mainpicdir]ì—ì„œ ì‚¬ì§„ì„ ì €ì¥í•œ í´ë”)] ì€ ê°™ë‹¤.
 
-		  ¤¤. º¹¿øÇÏ´Â ¹ı
-		    1.[backupdir]¿¡ º¹¿øÆÄÀÏÀ» ³Ö´Â´Ù.
-			2.[mainpicdir]¿¡ [subdir]Æú´õ¸¦ ³Ö´Â´Ù.
-			3.[getrestore]¿¡ º¹¿øÆÄÀÏÀÇ ÀÌ¸§À» Àû´Â´Ù.
-			4.[startnew]¸¦ false·Î ¼³Á¤ÇÑ´Ù.
+		  ã„´. ë³µì›í•˜ëŠ” ë²•
+		    1.[backupdir]ì— ë³µì›íŒŒì¼ì„ ë„£ëŠ”ë‹¤.
+			2.[mainpicdir]ì— [subdir]í´ë”ë¥¼ ë„£ëŠ”ë‹¤.
+			3.[getrestore]ì— ë³µì›íŒŒì¼ì˜ ì´ë¦„ì„ ì ëŠ”ë‹¤.
+			4.[startnew]ë¥¼ falseë¡œ ì„¤ì •í•œë‹¤.
 
-		  ¤§.½ÃÀÛÇÒ ¶§ ÀÚµ¿À¸·Î º¹¿øÆÄÀÏÀÌ ¾ÈµÇ¸é Ã³À½ºÎÅÍ ½ÃÀÛµÈ´Ù.
+		  ã„·.ì‹œì‘í•  ë•Œ ìë™ìœ¼ë¡œ ë³µì›íŒŒì¼ì´ ì•ˆë˜ë©´ ì²˜ìŒë¶€í„° ì‹œì‘ëœë‹¤.
 		*/
 
-		//°ø¿ë
+		//ê³µìš©
 		String mainpicdir = "C:\\Users\\dddfffddffss\\Pictures\\progoutput\\pr";
 		String backupdir = "bak";
 
-		//º¹¿øÆÄÀÏ
+		//ë³µì›íŒŒì¼
 		boolean startnew = true;
 		String getrestore = "1629614555756",subdir = null;
 		
 		
-		//º¹¿øÆÄÀÏ ·Îµå ½ÇÆĞ½Ã È°¿ëÇÒ ÃÊ±â ¼³Á¤
+		//ë³µì›íŒŒì¼ ë¡œë“œ ì‹¤íŒ¨ì‹œ í™œìš©í•  ì´ˆê¸° ì„¤ì •
 		int fwindowx = 3840 , fwindowy = 2160 , ballsize = 100;
 		double scale = 1000 , gap = 200 , m = 1 , fgc = 100000;
 		/*
@@ -48,7 +48,7 @@ class play
 		int windowx = 0,windowy = 0,progress = 0;
 		double gc = 0;
 
-		// ¹é¾÷ ÆÄÀÏ ·Îµå
+		// ë°±ì—… íŒŒì¼ ë¡œë“œ
 		try{
 			getrestore = startnew?"":backupdir+"\\"+getrestore+".mdpp";
 			BufferedReader bw = new BufferedReader(new FileReader(new File(getrestore)));
@@ -58,7 +58,7 @@ class play
 			ArrayList<object> ao = new ArrayList<>();
 
 			for(int i=0;(s=bw.readLine())!=null;i++){
-				//µÑÂ° ÁÙ ºÎÅÍ´Â object Á¤º¸
+				//ë‘˜ì§¸ ì¤„ ë¶€í„°ëŠ” object ì •ë³´
 				if(i>0){
 					stn = new StringTokenizer(s,"/");
 					ao.add(new object(
@@ -71,7 +71,7 @@ class play
 					));
 				}
 
-				//Ã¹ ÁÙÀº Ã¢ Å©±â, gc , ÁøÇà Á¤µµ(progress) , id(subdir) ÀÌ µé¾î°¡ÀÖÀ½
+				//ì²« ì¤„ì€ ì°½ í¬ê¸°, gc , ì§„í–‰ ì •ë„(progress) , id(subdir) ì´ ë“¤ì–´ê°€ìˆìŒ
 				else{
 					stn = new StringTokenizer(s,",");
 					windowx = Integer.valueOf(stn.nextToken());
@@ -84,9 +84,9 @@ class play
 
 			obao = new object[ao.size()];
 			for(int j=0;j<ao.size();j++)obao[j]=ao.get(j);
-		// ¹é¾÷ÆÄÀÏ ·Îµå ½ÇÆĞ, »õ·Î ½ÃÀÛ
+		// ë°±ì—…íŒŒì¼ ë¡œë“œ ì‹¤íŒ¨, ìƒˆë¡œ ì‹œì‘
 		} catch(Exception e){
-			System.out.println("·Îµù ½ÇÆĞ");
+			System.out.println("ë¡œë”© ì‹¤íŒ¨");
 
 			windowx = fwindowx;
 			windowy = fwindowy;
@@ -102,8 +102,8 @@ class play
 			obao = mo.ao(scale,gap,m,ballsize);
 
 		} finally {
-			System.out.println("object »çÀÌÁî : "+obao.length);
-			System.out.println("\nÁ¾·áÇÏ·Á¸é mÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("object ì‚¬ì´ì¦ˆ : "+obao.length);
+			System.out.println("\nì¢…ë£Œí•˜ë ¤ë©´ mì„ ì…ë ¥í•˜ì„¸ìš”");
 			gf = new gravityfield(obao,gc,0,0);
 			gf.setprogress(progress);
 			gf.setid(subdir);
@@ -114,7 +114,7 @@ class play
 			ifac.startfactory(mainpicdir,-1);
 		}
 		
-	//Á¤»óÀûÀ¸·Î Á¾·á µÇ¸é ÇöÀç »óÅÂ ÀÚµ¿ ÀúÀå//
+	//ì •ìƒì ìœ¼ë¡œ ì¢…ë£Œ ë˜ë©´ í˜„ì¬ ìƒíƒœ ìë™ ì €ì¥//
 
 		try{
 			File f1 = new File(backupdir);

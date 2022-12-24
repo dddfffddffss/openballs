@@ -23,15 +23,15 @@ public class imagefactory
 	}
 
 	/*x	
-	 - calnextpictureÀ¸·Î °è»êÇÏ°í makeframeimage·Î °è»ê °á°ú¸¦ Ãâ·ÂÇÑ´Ù.
-	   - ¸ğµç ¿¬»êÀº calnextpicture( gf ) ¿¡¼­ ÀÌ·ïÁö¹Ç·Î, makeframeimage( imagefactory )Àº ´Ü¼øÇÑ ÀÌ¹ÌÁö Á¦ÀÛ °úÁ¤ÀÌ´Ù.
+	 - calnextpictureìœ¼ë¡œ ê³„ì‚°í•˜ê³  makeframeimageë¡œ ê³„ì‚° ê²°ê³¼ë¥¼ ì¶œë ¥í•œë‹¤.
+	   - ëª¨ë“  ì—°ì‚°ì€ calnextpicture( gf ) ì—ì„œ ì´ë¤„ì§€ë¯€ë¡œ, makeframeimage( imagefactory )ì€ ë‹¨ìˆœí•œ ì´ë¯¸ì§€ ì œì‘ ê³¼ì •ì´ë‹¤.
 	*/
 
 	private void calnextpicture(){
 		gf.moving();
 	}
 
-	//»õ·Î¿î ÇÁ·¹ÀÓÀÇ ÀÌ¹ÌÁö °¡Á®¿À±â
+	//ìƒˆë¡œìš´ í”„ë ˆì„ì˜ ì´ë¯¸ì§€ ê°€ì ¸ì˜¤ê¸°
 	private BufferedImage makeframeimage(){
 		BufferedImage bi = new BufferedImage(x, y, BufferedImage.TYPE_INT_RGB);
 		Graphics g1 = bi.getGraphics();
@@ -47,17 +47,17 @@ public class imagefactory
 		return bi;
 	}
 
-	//ÇöÀç »óÅÂÀÇ gf¸¦ ÀÌ¹ÌÁö·Î Ãâ·ÂÇÑ´Ù.
+	//í˜„ì¬ ìƒíƒœì˜ gfë¥¼ ì´ë¯¸ì§€ë¡œ ì¶œë ¥í•œë‹¤.
 	private void makecurrentstateoutput(String dir,String subdir,String name){
         try {ImageIO.write(makeframeimage(),"JPG", new File(dir+"\\"+subdir+"\\"+name+".jpg")); }
 		catch (IOException e) {e.printStackTrace();}
 	}
 
 	/*
-	 - dir´Â µğ·¢Åä¸®+ÀÌ¸§ ±îÁö¸¸, ±¸ºĞÀÚ¸¦ ¾µ ÇÊ¿ä ¾ø´Ù.
-	 - subdirÀº °¢ Æú´õ¸¶´Ù id°¡ ÁöÁ¤µÇ¾î ¹é¾÷ÆÄÀÏ°ú ½±°Ô ¸¸³¯ ¼ö ÀÖ°Ô ÇÑ´Ù.
-	   - ¹é¾÷ÆÄÀÏÀÇ ÀÌ¸§°ú subdirÀÇ ÀÌ¸§Àº id·Î µ¿ÀÏÇÏ´Ù.
-	   - idÀÇ ÀÌ¸§Àº Ã³À½À¸·Î ¸¸µé¾îÁø ½Ã°£À¸·Î ÇÑ´Ù.
+	 - dirëŠ” ë””ë™í† ë¦¬+ì´ë¦„ ê¹Œì§€ë§Œ, êµ¬ë¶„ìë¥¼ ì“¸ í•„ìš” ì—†ë‹¤.
+	 - subdirì€ ê° í´ë”ë§ˆë‹¤ idê°€ ì§€ì •ë˜ì–´ ë°±ì—…íŒŒì¼ê³¼ ì‰½ê²Œ ë§Œë‚  ìˆ˜ ìˆê²Œ í•œë‹¤.
+	   - ë°±ì—…íŒŒì¼ì˜ ì´ë¦„ê³¼ subdirì˜ ì´ë¦„ì€ idë¡œ ë™ì¼í•˜ë‹¤.
+	   - idì˜ ì´ë¦„ì€ ì²˜ìŒìœ¼ë¡œ ë§Œë“¤ì–´ì§„ ì‹œê°„ìœ¼ë¡œ í•œë‹¤.
 	*/
 
 	public void startfactory(String dir,int count){
@@ -70,6 +70,6 @@ public class imagefactory
 			makecurrentstateoutput(dir,subdir,i+"");
 			calnextpicture();
 		}
-		System.out.println("Á¾·áÇÕ´Ï´Ù.");
+		System.out.println("ì¢…ë£Œí•©ë‹ˆë‹¤.");
 	}
 }
